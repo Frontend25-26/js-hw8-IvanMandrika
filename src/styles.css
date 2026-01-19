@@ -59,9 +59,8 @@ body {
     box-shadow: 2px 2px 2px #000;
     cursor: pointer;
     position: relative;
-    margin-left: var(--ml, 0);
-    margin-bottom: var(--mb, 0);
-    transition: margin-left 0.3s ease-out, margin-bottom 0.3s ease-out;
+    transform: translate(var(--tx, 0), var(--ty, 0));
+    transition: transform 0.3s ease-out;
     z-index: 1;
 }
 
@@ -100,7 +99,7 @@ body {
 
 .piece.selected {
     box-shadow: 0 0 15px 5px rgba(255, 215, 0, 0.8);
-    transform: scale(1.1);
+    transform: translate(var(--tx, 0), var(--ty, 0)) scale(1.1);
 }
 
 .explosion {

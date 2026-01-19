@@ -152,12 +152,12 @@ function movePiece(piece, targetRow, targetCol, capturedPiece = null) {
     const deltaRow = targetRow - startRow;
     const deltaCol = targetCol - startCol;
 
-    piece.style.setProperty("--ml", `${deltaCol * cellWidth}px`);
-    piece.style.setProperty("--mb", `${-deltaRow * cellHeight}px`);
+    piece.style.setProperty("--tx", `${deltaCol * cellWidth}px`);
+    piece.style.setProperty("--ty", `${deltaRow * cellHeight}px`);
 
     setTimeout(() => {
-        piece.style.setProperty("--ml", "0");
-        piece.style.setProperty("--mb", "0");
+        piece.style.setProperty("--tx", "0");
+        piece.style.setProperty("--ty", "0");
 
         piece.dataset.row = targetRow;
         piece.dataset.col = targetCol;
